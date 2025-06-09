@@ -1,0 +1,50 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FCE4EC;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Estilo del header */
+header {
+  background-color: #F8BBD0;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navegación */
+nav a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 15px; /* Tamaño de letra aumentado */
+  font-weight: bold;
+  transition: text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor de imagen */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.main-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
