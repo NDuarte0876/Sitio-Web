@@ -1,0 +1,85 @@
+/* Esto borra cualquier espacio o margen que los navegadores ponen por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general de tu página (fondo, color de texto, tipo de letra) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F8BBD0; /* Color rosa claro */
+  color: #ffffff; /* Letra blanca */
+  font-weight: bold; /* Letra negrita */
+}
+
+/* El encabezado (donde está tu menú de navegación: Inicio | Quiénes Somos | etc.) */
+header {
+  background-color: #F8BBD0; /* Mismo color rosa claro */
+  padding: 15px 0; /* Espacio arriba y abajo del menú */
+  text-align: center; /* Centra el texto del menú (Inicio | Quiénes Somos | etc.) */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera debajo del menú */
+}
+
+/* Enlaces del menú (Inicio, Quiénes Somos, etc.) */
+nav a {
+  color: #ffffff; /* Color de la letra de los enlaces: blanco */
+  margin: 0 15px; /* Espacio entre los enlaces del menú */
+  text-decoration: none; /* Quita la línea de abajo de los enlaces */
+  font-size: 15px; /* Tamaño de la letra de los enlaces */
+  font-weight: bold; /* Letra negrita */
+  transition: text-decoration 0.3s ease; /* Efecto suave cuando pasas el ratón */
+}
+
+/* Lo que pasa cuando pones el ratón sobre un enlace del menú */
+nav a:hover {
+  text-decoration: underline; /* Aparece una línea debajo del enlace */
+}
+
+/* El contenedor de tus imágenes (si tienes una imagen principal grande) */
+.image-container {
+  display: flex; /* Ayuda a centrar la imagen */
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente (si es un contenedor flexible) */
+  margin: 50px 0; /* Espacio arriba y abajo del contenedor de la imagen */
+}
+
+/* La imagen principal en sí */
+.main-image {
+  max-width: 80%; /* La imagen no será más grande del 80% del ancho de la pantalla */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 20px; /* Bordes redondeados para la imagen */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+}
+
+/* ----- CÓDIGOS PARA TU TÍTULO Y PÁRRAFO ----- */
+
+/* Esto es para el título (como "¿Quiénes Somos?"). Asumo que usas <h1> o <h2> */
+h1, h2 {
+  text-align: center; /* Centra el texto del título */
+  
+  /* Esto hace que el título se centre en la página */
+  display: block; /* Asegura que el título ocupe su propia línea */
+  width: fit-content; /* El título solo ocupará el ancho que necesita su texto */
+  margin-left: auto; /* Empuja el título hacia el centro desde la izquierda */
+  margin-right: auto; /* Empuja el título hacia el centro desde la derecha */
+  
+  /* Esto controla los espacios */
+  margin-top: 1cm; /* NUEVO: Separa el título del encabezado (menú) por 1 cm */
+  margin-bottom: 1.5cm; /* Separa el título del párrafo de abajo por 1.5 cm */
+}
+
+/* Esto es para tu párrafo (como "En Beauty Glam Studio's...") */
+p {
+  text-align: center; /* Centra el texto dentro del párrafo */
+  
+  /* Esto hace que el párrafo tenga márgenes a los lados y se centre */
+  display: block; /* Asegura que el párrafo ocupe su propia línea */
+  max-width: calc(100% - 7cm); /* Hace que el párrafo sea más estrecho, dejando 3.5cm a cada lado */
+  margin-left: auto; /* Centra el bloque del párrafo horizontalmente */
+  margin-right: auto; /* Centra el bloque del párrafo horizontalmente */
+
+  /* Esto quita márgenes no deseados del párrafo para que el título controle el espacio */
+  margin-top: 0; /* El espacio arriba del párrafo ya lo controla el título */
+  margin-bottom: 20px; /* Un poco de espacio debajo del párrafo si lo necesitas */
+}
