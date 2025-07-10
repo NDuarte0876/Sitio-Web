@@ -1,0 +1,122 @@
+/*
+ * Archivo: contacto.css
+ * Este CSS contiene estilos específicos para la página de contacto.
+ * Requiere que style.css (o un archivo similar) esté enlazado primero
+ * para los estilos globales del body, header, nav y footer.
+ */
+
+/* Contenedor principal de la sección de contacto */
+/* Esta clase asume que ya tienes estilos generales para contenedores
+   similares en tu style.css (como .page-content).
+   Si no es así, deberás copiar las propiedades de .page-content aquí
+   o asegurarte de que este archivo se carga DESPUÉS de style.css. */
+.contacto {
+  max-width: 800px; /* Ancho específico para el formulario */
+  margin: 40px auto; /* Centrar con margen superior/inferior */
+  padding: 30px; /* Relleno interno */
+  background-color: #FFFFFF; /* Fondo blanco */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  text-align: center; /* Centrar el contenido general de la sección */
+}
+
+/* Título de la sección de contacto */
+.contacto h1 {
+  color: #E91E63; /* Color rosa vibrante */
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+/* Párrafo introductorio de la sección de contacto */
+.contacto p {
+  color: #777777; /* Color de texto gris oscuro */
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  text-align: center; /* Párrafo centrado */
+  padding: 0 10px; /* Relleno horizontal para el párrafo */
+}
+
+/* Contenedor de la cuadrícula de campos del formulario */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre los campos */
+  margin-bottom: 20px; /* Margen debajo de la cuadrícula antes del botón */
+}
+
+/* Estilo de los campos de entrada de texto y área de texto */
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto input[type="tel"],
+.contacto input[type="asunto"], /* Añadido para el campo de Asunto */
+.contacto textarea {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 15px; /* Relleno dentro del campo */
+  border: 1px solid #FFCDD2; /* Borde rosa claro */
+  border-radius: 8px; /* Esquinas ligeramente redondeadas */
+  font-family: 'Poppins', sans-serif; /* Fuente consistente */
+  font-size: 1em; /* Tamaño de fuente */
+  color: #555555; /* Color del texto dentro del campo */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Estilo de los campos al enfocar (cuando el usuario hace clic o tabula en ellos) */
+.contacto input[type="text"]:focus,
+.contacto input[type="email"]:focus,
+.contacto input[type="tel"]:focus,
+.contacto input[type="asunto"]:focus, /* Añadido para Asunto */
+.contacto textarea:focus {
+  outline: none; /* Eliminar el contorno predeterminado del navegador */
+  border-color: #E91E63; /* Borde rosa vibrante al enfocar */
+  box-shadow: 0 0 8px rgba(233, 30, 99, 0.2); /* Sombra sutil de resplandor */
+}
+
+/* Estilo específico para el área de texto (textarea) */
+.contacto textarea {
+  grid-column: 1 / span 2; /* Ocupa las dos columnas en la cuadrícula */
+  resize: vertical; /* Permitir solo redimensionamiento vertical */
+  min-height: 120px; /* Altura mínima del área de texto */
+}
+
+/* Estilo del botón de envío del formulario */
+.contacto button[type="submit"] {
+  background-color: #E91E63; /* Color de fondo rosa vibrante */
+  color: #ffffff; /* Color del texto del botón */
+  padding: 15px 30px; /* Relleno interno */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Esquinas redondeadas */
+  font-size: 1.2em; /* Tamaño de fuente */
+  font-weight: 600; /* Peso de fuente negrita */
+  cursor: pointer; /* Cambiar el cursor a una mano al pasar por encima */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  width: auto; /* Ancho automático basado en el contenido */
+  display: block; /* Convertir en bloque para poder usar margin: auto */
+  margin: 0 auto; /* Centrar el botón */
+}
+
+/* Efecto al pasar el ratón sobre el botón de envío */
+.contacto button[type="submit"]:hover {
+  background-color: #D81B60; /* Rosa más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Ligerísimo efecto de "levantamiento" */
+}
+
+/* Media Queries para Responsividad (específicas para el formulario) */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Apilar los campos en pantallas más pequeñas */
+  }
+
+  .contacto {
+    margin: 20px; /* Reducir margen en pantallas pequeñas */
+    padding: 20px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .contacto h1 {
+    font-size: 2em; /* Reducir tamaño del título */
+  }
+
+  .contacto p {
+    padding: 0 10px; /* Reducir padding de párrafo */
+  }
+}
