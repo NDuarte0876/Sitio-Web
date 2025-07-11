@@ -1,0 +1,296 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Consistent Poppins font */
+  background-color: #FCE4EC; /* Light pink background */
+  color: #555555; /* Darker text for better readability */
+  font-weight: 400; /* Adjusted font-weight */
+  line-height: 1.6; /* Improved line spacing */
+  display: flex; /* Enable flexbox for sticky footer */
+  flex-direction: column; /* Stack content vertically */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Estilo del header */
+header {
+  background-color: #F8BBD0; /* Header pink */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer (Floating/Fixed) */
+footer {
+  background-color: #F8BBD0; /* Footer pink */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Make the footer fixed */
+  bottom: 0; /* Pin to the bottom */
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensure it stays on top of other content */
+  color: #ffffff; /* Footer text color */
+}
+
+/* Main Content Area adjustments for fixed footer */
+main {
+  flex: 1; /* Allow main content to grow and push footer down */
+  padding-bottom: 80px; /* Add padding at the bottom to prevent content from being hidden by the fixed footer. Adjust if your footer height changes. */
+}
+
+/* Navegación */
+nav a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 16px; /* Slightly increased font size */
+  font-weight: 600; /* Bolder for navigation links */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #E91E63; /* A vibrant pink on hover */
+}
+
+/* Contenedor de imagen (if used, kept for completeness) */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.main-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- General Content Section Styles (for Misión, Visión, etc.) --- */
+.content-section {
+  max-width: 900px; /* Max width for content to prevent stretching */
+  margin: 40px auto; /* Centered with vertical margin */
+  padding: 30px; /* Internal padding */
+  background-color: #FFFFFF; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center align headings and paragraph */
+}
+
+.content-section h1 {
+  color: #E91E63; /* Main heading color */
+  margin-bottom: 20px;
+  font-size: 2.5em; /* Larger heading */
+  font-weight: 600;
+}
+
+.content-section p {
+  color: #777777; /* Paragraph text color */
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  text-align: justify; /* Justify text for better readability in blocks */
+  padding: 0 20px; /* Inner padding for paragraphs */
+}
+
+.content-section img.page-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- Contact Section Specific Styles (inherits from .content-section where appropriate) --- */
+.contacto {
+  max-width: 800px; /* Slightly smaller for contact form */
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contacto h1 {
+  color: #E91E63;
+  margin-bottom: 15px;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.contacto p {
+  color: #777777;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  text-align: center; /* Center paragraph for contact form intro */
+  padding: 0 10px;
+}
+
+/* Grid para formulario */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Increased gap for better spacing */
+  margin-bottom: 20px; /* Space before the button */
+}
+
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto input[type="tel"],
+.contacto textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #FFCDD2; /* Lighter pink border */
+  border-radius: 8px; /* Slightly more rounded inputs */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #555555;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto input[type="text"]:focus,
+.contacto input[type="email"]:focus,
+.contacto input[type="tel"]:focus,
+.contacto textarea:focus {
+  outline: none;
+  border-color: #E91E63; /* Focus border color */
+  box-shadow: 0 0 8px rgba(233, 30, 99, 0.2); /* Subtle glow on focus */
+}
+
+.contacto textarea {
+  grid-column: 1 / span 2;
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 120px; /* Minimum height for textarea */
+}
+
+.contacto button[type="submit"] {
+  background-color: #E91E63; /* Button background color */
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto; /* Allow button to size naturally */
+  display: block; /* Make button take full width in its context if needed */
+  margin: 0 auto; /* Center the button if it's not full width */
+}
+
+.contacto button[type="submit"]:hover {
+  background-color: #D81B60; /* Darker pink on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* --- Product Grid Styles --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between products */
+    margin-top: 30px;
+    padding: 0 20px; /* Padding for the grid itself */
+}
+
+.product-item {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+    max-width: 100%;
+    height: 200px; /* Fixed height for product images */
+    object-fit: cover; /* Crop image to fit */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    color: #E91E63;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    color: #777777;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    min-height: 50px; /* Ensure consistent height for descriptions */
+    text-align: center; /* Center align product description */
+}
+
+.product-item .price {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #D81B60;
+    display: block; /* Make price a block element */
+    margin-bottom: 15px;
+}
+
+.product-item button {
+    background-color: #F8BBD0; /* Lighter pink button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+    background-color: #E91E63; /* Darker pink on hover */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Stack inputs on smaller screens */
+  }
+
+  nav a {
+    display: block; /* Stack navigation links on smaller screens */
+    margin: 10px 0;
+  }
+
+  .contacto, .content-section {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .contacto h1, .content-section h1 {
+    font-size: 2em;
+  }
+
+  .content-section p {
+    padding: 0 10px; /* Reduce padding for smaller screens */
+  }
+
+  .product-grid {
+    padding: 0 10px;
+    gap: 20px;
+  }
+}
+
+* {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path fill="%23ff69b4" d="M16 29s-13-7.4-13-17.3C3 7.6 6.6 4 11 4c2.5 0 4.8 1.3 6 3.3C18.2 5.3 20.5 4 23 4c4.4 0 8 3.6 8 7.7C31 21.6 16 29 16 29z"/></svg>') 16 16, auto;
+}
