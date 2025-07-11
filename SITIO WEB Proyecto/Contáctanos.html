@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Beauty Glam Studio’s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .mensaje-exito {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #f8f8f8;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      font-size: 1.5rem;
+      color: #333;
+      text-align: center;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado con navegación -->
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a> | 
+      <a href="Quiénes Somos.html">Quiénes Somos</a> | 
+      <a href="Misión.html">Misión</a> | 
+      <a href="Visión.html">Visión</a> |   
+      <a href="Productos.html">Productos</a> |
+      <a href="Contáctanos.html">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main class="contacto">
+    <h1>Contáctanos</h1>
+    <p>¿Tienes alguna pregunta, sugerencia o quieres agendar una cita? ¡Estamos aquí para escucharte! Envíanos un mensaje y te atenderemos en breve.</p>
+
+    <form id="formulario-contacto">
+      <div class="form-grid">
+          <input type="text" name="nombre" placeholder="Tu Nombre Completo" required>
+          <input type="email" name="email" placeholder="Correo Electrónico" required>
+          <input type="tel" name="telefono" placeholder="Número de Teléfono (opcional)">
+          <input type="text" name="asunto" placeholder="Asunto del Mensaje" required>
+          <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="6" required></textarea>
+      </div>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+
+    <div class="mensaje-exito" id="mensaje-exito">
+      ¡Gracias por tu preferencia!
+    </div>
+  </main>
+
+  <footer>
+    <p>© Derechos reservados 2025 | Beauty Glam Studio</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const formulario = document.getElementById('formulario-contacto');
+    const mensaje = document.getElementById('mensaje-exito');
+
+    formulario.addEventListener('submit', function(event) {
+      event.preventDefault(); // evita el envío real
+      formulario.style.display = 'none'; // oculta el formulario
+      mensaje.style.display = 'block';   // muestra el mensaje
+    });
+  </script>
+
+</body>
+</html>
